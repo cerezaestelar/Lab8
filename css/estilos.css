@@ -1,0 +1,75 @@
+/* Estilos generales de la página (Lab8 - JS básico) */
+* { box-sizing: border-box; }
+ 
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: "Montserrat", Arial, sans-serif;
+    color: #222;
+    /* Imagen de fondo (guardada en la carpeta img) */
+    background: #288828 url("../img/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+ 
+/* Título centrado, como en el diseño */
+h1 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 40px;
+    color: #000;
+    margin: 0 0 40px 0;
+}
+ 
+/* Cuadrícula de 2 columnas con separación entre cuadros */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+ 
+/* Cuadros blancos, sin bordes redondeados ni sombra */
+.card {
+    background: #fff;
+    padding: 20px;
+}
+ 
+/* El quinto cuadro queda centrado, del mismo tamaño que los demás */
+.card.ancho {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 17.5px);
+}
+ 
+.card h2 { margin-top: 0; font-size: 18px; color: #661414; }
+ 
+label { display: block; margin: 8px 0 2px; font-size: 14px; }
+ 
+input { width: 100%; padding: 6px; }
+ 
+button {
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: #661414;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover { background: #661414; }
+ 
+/* Área donde se muestra el resultado */
+.res {
+    margin-top: 12px;
+    padding: 8px;
+    background: #fde4ee;
+    border-left: 4px solid #661414;
+    min-height: 20px;
+}
+ 
+/* En pantallas pequeñas pasa a una columna */
+@media (max-width: 700px) {
+    .grid { grid-template-columns: 1fr; }
+    .card.ancho { width: 100%; }
+}

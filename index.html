@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Página de cálculo</title>
+    <!-- Enlace a la hoja de estilos -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <h1>Lab8: Página de cálculo</h1>
+
+    <div class="grid">
+
+        <!-- 1. Suma de tres valores -->
+        <div class="card">
+            <h2>1. Suma de tres valores</h2>
+            <label for="s1">Primer número</label>
+            <input type="number" id="s1" step="any">
+            <label for="s2">Segundo número</label>
+            <input type="number" id="s2" step="any">
+            <label for="s3">Tercer número</label>
+            <input type="number" id="s3" step="any">
+            <button onclick="sumarTres()">Sumar</button>
+            <div class="res" id="res1"></div>
+        </div>
+
+        <!-- 2. Cuadrado de un número -->
+        <div class="card">
+            <h2>2. Cuadrado de un número</h2>
+            <label for="cuad">Número</label>
+            <input type="number" id="cuad" step="any">
+            <button onclick="calcularCuadrado()">Calcular cuadrado</button>
+            <div class="res" id="res2"></div>
+        </div>
+
+        <!-- 3. Promedio de calificaciones -->
+        <div class="card">
+            <h2>3. Promedio de calificaciones</h2>
+            <label for="nombre">Nombre del estudiante</label>
+            <input type="text" id="nombre">
+            <label for="n1">Calificación 1</label>
+            <input type="number" id="n1" step="any">
+            <label for="n2">Calificación 2</label>
+            <input type="number" id="n2" step="any">
+            <label for="n3">Calificación 3</label>
+            <input type="number" id="n3" step="any">
+            <button onclick="calcularPromedio()">Calcular promedio</button>
+            <div class="res" id="res3"></div>
+        </div>
+
+        <!-- 4. Conversión de metros -->
+        <div class="card">
+            <h2>4. Conversión de unidades</h2>
+            <label for="metros">Valor en metros</label>
+            <input type="number" id="metros" step="any">
+            <button onclick="convertirMetros()">Convertir</button>
+            <div class="res" id="res4"></div>
+        </div>
+
+                <!-- 5. Comparación de dos valores -->
+        <div class="card ancho">
+            <h2>5. Comparación de dos valores</h2>
+            <label for="c1">Primer número</label>
+            <input type="number" id="c1" step="any">
+            <label for="c2">Segundo número</label>
+            <input type="number" id="c2" step="any">
+            <button onclick="compararValores()">Comparar</button>
+            <div class="res" id="res5"></div>
+        </div>
+ 
+    </div>
+ 
+    <!-- Enlace al archivo JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+ 
